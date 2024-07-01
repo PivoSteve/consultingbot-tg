@@ -30,7 +30,7 @@ async def main() -> None:
     bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
     await dp.start_polling(bot)
 
-log_filename = f'./logs/listingbot_{datetime.now().strftime("%Y-%m-%d_%H-%M-%S")}.log'
+log_filename = f'./logs/{datetime.now().strftime("%Y-%m-%d_%H-%M-%S")}.log'
 
 if __name__ == "__main__":
     logging.basicConfig(
