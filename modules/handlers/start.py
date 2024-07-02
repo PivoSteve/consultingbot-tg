@@ -9,8 +9,8 @@ start_router = Router()
 
 temp = []
 
-EMAIL_FROM_PATH = 'C:/2501/telegram_bot/data_consulting/EMAIL'
-EMAIL_PASSWORD_PATH = 'C:/2501/telegram_bot/data_consulting/PASSWRD'
+EMAIL_FROM_PATH = '/home/syra/2501/tg_bots/consultingbot/EMAIL' ## WINDOWS: C:/2501/telegram_bot/data_consulting/
+EMAIL_PASSWORD_PATH = '/home/syra/2501/tg_bots/consultingbot/PASSWRD' ## WINDOWS: C:/2501/telegram_bot/data_consulting/
 EMAIL_TO = 'horriblebuba@gmail.com'
 
 def read_from_file(file_path):
