@@ -7,8 +7,12 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from datetime import datetime
 from modules.handlers.start import start_router
-TOKEN_FILE_PATH = '/home/syra/2501/tg_bots/consultingbot/TOKEN' ## MARK: CHANGE TOKEN PATH 
-## WINDOWS: C:/2501/telegram_bot/data_consulting/TOKEN
+if os.name == 'nt':
+    logging.info('Using WIN system base')
+    TOKEN_FILE_PATH = 'C:/2501/telegram_bot/data_consulting/TOKEN' ## MARK: CHANGE TOKEN PATH 
+else:
+    logging.info('Using UNIX system base')
+    TOKEN_FILE_PATH = '/home/syra/2501/tg_bots/consultingbot/TOKEN'
 
 def read_token_from_file(file_path):
     try:
